@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 public static class GuessNumber {
 
@@ -7,6 +8,7 @@ public static class GuessNumber {
 
     //Starting point of the program.
     public static void Main() {
+        Console.OutputEncoding = Encoding.Unicode;
         PlayGame();
     }
 

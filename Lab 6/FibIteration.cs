@@ -1,8 +1,9 @@
 ﻿
 public class FibIteration : FindFib {
 
+    //Implements the iteration version of Fibonacci
     public int CalculateFib(int i) {
-        
+         
         if (i <= 2) return 1;
 
         int x = 1;

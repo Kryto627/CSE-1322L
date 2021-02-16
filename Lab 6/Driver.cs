@@ -2,12 +2,30 @@
 
 public static class Driver {
 
+    //Starting point of the program.
     public static void Main() {
 
-        FindFib fib = new FibIteration();
+        //Loop util user quits program.
+        while (true) {
 
-        for (int i = 1; i < 20; i++) {
-            Console.WriteLine(fib.CalculateFib(i));
+            //Prompt user to enter a number.
+            Console.WriteLine("Enter the number you want to find the Fibonacci Series for:");
+
+            //Read user input as string.
+            string input = Console.ReadLine();
+
+            //Convert input string into a number, skip if the string is not a number.
+            if (!int.TryParse(input, out int number)) continue;
+
+            //Preform iteration calcuation.
+            FindFib iteration = new FibIteration();
+            int iterationOutput = iteration.CalculateFib(number);
+            Console.WriteLine($"Fib of {number} by iteration is: {iterationOutput}");
+
+            //Preform formula calcuation.
+            FindFib formula = new FibFormula();
+            int formulaOutput = formula.CalculateFib(number);
+            Console.WriteLine($"Fib of {number} by formula is: {formulaOutput}");
         }
     }
 }

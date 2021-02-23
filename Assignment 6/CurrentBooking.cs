@@ -7,4 +7,8 @@ public class CurrentBooking : Ticket {
     public override int GetPrice() {
         return 75;
     }
+
+    public override string ToString() {
+        return base.ToString() + $" for today's game.";
+    }
 }

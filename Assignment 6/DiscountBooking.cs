@@ -12,4 +12,13 @@ public class DiscountBooking : Ticket {
     public override int GetPrice() {
         return numDaysUntilGame == 0 ? 75 : 10;
     }
+
+    //Retrieves the number of days until game.
+    public int GetNumberOfDaysUntilGame() {
+        return numDaysUntilGame;
+    }
+
+    public override string ToString() {
+        return base.ToString() + $" is a discount ticket for a game in {numDaysUntilGame} days.";
+    }
 }

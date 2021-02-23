@@ -15,7 +15,11 @@ public abstract class Ticket {
     public abstract int GetPrice();
 
     //Retrieves the ticket's number.
-    public int GetTicketNumber() {
+    private int GetTicketNumber() {
         return ticketNumber;
+    }
+
+    public override string ToString() {
+        return $"Ticket number {ticketNumber} with a price of ${GetPrice()}";
     }
 }
